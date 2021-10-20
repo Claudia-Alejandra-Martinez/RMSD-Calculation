@@ -1,4 +1,4 @@
-# Welcome to the Ramirez Lab Wiki - Calculate RMSD
+# Welcome to the Ramirez Lab Wiki - RMSD Calculation
 
 The Root Mean Square Deviation (RMSD) is a common metric used to evaluate the distance between the predicted pose and the native pose, given a superposition of proteins or ligands. It is calculated with the following equation:
 
