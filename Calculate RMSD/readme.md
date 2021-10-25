@@ -5,14 +5,17 @@ The Root Mean Square Deviation (RMSD) is a common metric used to evaluate the di
 <p align="center">
   <img src="https://github.com/Claudia-Alejandra-Martinez/Calculate-RMSD/blob/main/Calculate%20RMSD/media/RMSD.PNG?raw=true">
  </p>
-Figure taken from: [J Cheminform 11, 40 (2019)](https://doi.org/10.1186/s13321-019-0362-7)
+
+Equation taken from: [J. Cheminform 11, 40 (2019)](https://doi.org/10.1186/s13321-019-0362-7)
+
+
 where N is the number of atoms in the ligand, and di is the Euclidean distance between the two atoms in the i-th pair of corresponding atoms.
 
 You will need: Schrödinger
 
 1. Calculate the RMSD of a single ligand:
 
-- Use the [rmsd.py](https://www.schrodinger.com/sites/default/files/s3/mkt/Documentation/current/docs/Documentation.htm#program_utility_usage/rmsd.html?TocPath=Command%2520References%257CProgram%252C%2520Script%252C%2520and%2520Utility%2520Usage%257C_____353) script to calculate the RMSD between conformer atomic coordinates. This script executes the normalization of the atom number scheme in case the input structures have different atom numbering schemes.
+- Use the [rmsd.py](https://www.schrodinger.com/sites/default/files/s3/mkt/Documentation/current/docs/Documentation.htm#program_utility_usage/rmsd.html?TocPath=Command%2520References%257CProgram%252C%2520Script%252C%2520and%2520Utility%2520Usage%257C_____353) script to calculate the RMSD between conformer atomic coordinates. This script executes the normalization of the atom number scheme in case the input structures have different atom numbering schemes and it is only comparing the heavy atoms (not H).
 
 
   ```bash
@@ -45,6 +48,9 @@ Note: The script must be executed within the folder where the files to be used a
 
 
   ```bash
-  for i in sp*; do $SCHRODINGER/run rmsd.py reference_ligand.mae $i>> RMSD_SP.txt;done
+  touch output.txt
+  for i in *.mae; do $SCHRODINGER/run rmsd.py reference_ligand.mae $i>> output.txt;done
   ```
   - You will get a .txt file
+
+This tutorial was created by 
