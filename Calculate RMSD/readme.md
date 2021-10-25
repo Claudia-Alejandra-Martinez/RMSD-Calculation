@@ -5,7 +5,7 @@ The Root Mean Square Deviation (RMSD) is a common metric used to evaluate the di
 <p align="center">
   <img src="https://github.com/Claudia-Alejandra-Martinez/Calculate-RMSD/blob/main/Calculate%20RMSD/media/RMSD.PNG?raw=true">
  </p>
-
+Figure taken from: [J Cheminform 11, 40 (2019)](https://doi.org/10.1186/s13321-019-0362-7)
 where N is the number of atoms in the ligand, and di is the Euclidean distance between the two atoms in the i-th pair of corresponding atoms.
 
 You will need: Schrödinger
