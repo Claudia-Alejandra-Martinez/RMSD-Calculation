@@ -53,4 +53,4 @@ Note: The script must be executed within the folder where the files to be used a
   ```
   - You will get a .txt file
 
-This tutorial was created by 
+This tutorial was created by [Claudia Martinez](https://github.com/Claudia-Alejandra-Martinez)
